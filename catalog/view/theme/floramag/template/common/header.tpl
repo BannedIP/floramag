@@ -124,7 +124,7 @@
         <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
         <?php } ?>
         <?php } ?>
-        <li><a href="http://flora-mag.com/index.php?route=product/category&path=61" title="Каталог семян"><span class="hidden-xs hidden-sm hidden-md">Каталог</span></a></li>
+        <li><a href="http://flora-mag.com/index.php?route=product/category&path=0" title="Каталог семян"><span class="hidden-xs hidden-sm hidden-md">Каталог</span></a></li>
         <li><a href="http://flora-mag.com/index.php?route=information/information&information_id=4" title="Каталог семян"><span class="hidden-xs hidden-sm hidden-md">О компании</span></a></li>
         <li><a href="http://flora-mag.com/index.php?route=product/special" title="Акции магазина семян"><span class="hidden-xs hidden-sm hidden-md">Акции</span></a></li>
         <li><a href="http://flora-mag.com/index.php?route=information/information&information_id=7" title="Новинки магазина семян"><span class="hidden-xs hidden-sm hidden-md">Новинки</span></a></li>

@@ -34,7 +34,7 @@ class ControllerModuleCategory extends Controller {
 		foreach ($categories as $category) {
 			$children_data = array();
 
-			if ($category['category_id'] == $data['category_id']) {
+			//if ($category['category_id'] == $data['category_id']) {
 				$children = $this->model_catalog_category->getCategories($category['category_id']);
 
 				foreach($children as $child) {
@@ -43,14 +43,14 @@ class ControllerModuleCategory extends Controller {
                             $subChild_data = array();
                             $subChildrens = $this->model_catalog_category->getCategories($child['category_id']);
                             foreach ($subChildrens as $subChild) {
-                              $filter_data = array(
+                              $filter_data1 = array(
                                 'filter_category_id'  => $subChild['category_id'],
                                 'filter_sub_category' => true
                               );
 
                               $subChild_data[] = array(
                                 'category_id' => $subChild['category_id'],
-                                'name'        => $subChild['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+                                'name'        => $subChild['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data1) . ')' : ''),
                                 'href'        => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $subChild['category_id'])
                               );
                             }
@@ -63,7 +63,7 @@ class ControllerModuleCategory extends Controller {
                         'children'	  => $subChild_data
 					);
 				}
-			}
+			//}
 
 			$filter_data = array(
 				'filter_category_id'  => $category['category_id'],
