@@ -1,4 +1,23 @@
-<h3 class="blocks_caption"><?php echo $heading_title; ?></h3>
+<div class="row some-links">
+    <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs">
+        <div class="semena"><a href="index.php?route=product/category&path=61"><p>Семена</p></a></div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs">
+        <div class="sazhancy"><a href="index.php?route=product/category&path=66"><p>Сажанцы</p></a></div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs">
+        <div class="ydobrenia"><a href="index.php?route=product/category&path=67"><p>Удобрения</p></a></div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs">
+        <a href="#"><img src="/image/catalog/knopavki/florovit.jpg"></a>
+    </div>
+</div>
+<div class="block_caption">
+    <div>
+        <h3>&nbsp;&nbsp;<?php echo $heading_title; ?></h3>
+    </div>
+    <div id="triangle-bottomleft"></div>
+</div>
 <div class="row">
   <?php foreach ($products as $product) { ?>
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -30,7 +49,9 @@
                 </p>
             </div>
             <div class="col-lg-6">
-                <a href="<?php echo $product['href']; ?>">Отзывы: <?php if ($product['reviews']) { echo $product['reviews'];} else { echo '0';  }?></a>
+                <p class='weight'>
+                                <?php echo "Вес: " .round($product['weight'],2). "г"; ?>
+                </p>
             </div>
         </div>
         <?php } ?>

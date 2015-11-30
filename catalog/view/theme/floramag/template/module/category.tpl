@@ -2,7 +2,6 @@
     
      <ul class="nav">
   <?php foreach ($categories as $category) { ?>
-      
           <li class="dropdown" ><a href="<?php echo $category['href']; ?>" class="<?php if ($category['category_id'] == $category_id) { ?>active<?php }?>"><?php echo $category['name']; ?><div style="float:right;"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></div></a>
           
           <?php if ($category['children']) { ?>

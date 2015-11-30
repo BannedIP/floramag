@@ -37,6 +37,7 @@ a {
 }
 a:hover {
 	text-decoration: none;
+    color: #e46c22;
 }
 legend {
 	font-size: 18px;
@@ -69,7 +70,7 @@ div.required .control-label:before {
 	color: #F00;
 	font-weight: bold;
 }
-/* Gradent to all drop down menus */
+/* Gradient to all drop down menus */
 .dropdown-menu li > a:hover {
 	text-decoration: none;
 	color: #ffffff;
@@ -123,7 +124,7 @@ div.required .control-label:before {
 }
 /* logo */
 #logo {
-	margin: 0 0 10px 0;
+	margin: 10px 0;
 }
 /* search */
 #search {
@@ -479,6 +480,16 @@ footer h5 {
 	text-shadow: 0 1px 0 #FFF;
 }
 /* carousel */
+/* Disable shadow*/
+.owl-wrapper-outer {
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.owl-controls .owl-page.active span {
+    background-color: #a5c546;
+}
 .carousel-caption {
 	color: #FFFFFF;
 	text-shadow: 0 1px 0 #000000;
@@ -496,6 +507,9 @@ footer h5 {
 	border: 1px solid #ddd;
 	margin-bottom: 20px;
 	overflow: auto;
+}
+.product-thumb h4 {
+    min-height: 30px;
 }
 .product-thumb:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -525,6 +539,10 @@ footer h5 {
 }
 .product-thumb h4 {
 	font-weight: bold;
+}
+.product-thumb p {
+    max-height: 80px;
+    overflow: hidden;
 }
 .product-thumb .caption {
 	padding: 0 31px;
@@ -569,11 +587,23 @@ footer h5 {
 h2.price {
 	margin: 0;
 }
-.product-thumb .price {
+.product-thumb .col-lg-1, .product-thumb .col-lg-10, .product-thumb .col-lg-11,
+.product-thumb .col-lg-12, .product-thumb .col-lg-2, .product-thumb .col-lg-3,
+.product-thumb .col-lg-4, .product-thumb .col-lg-5, .product-thumb .col-lg-6,
+.product-thumb .col-lg-7, .product-thumb .col-lg-8, .product-thumb .col-lg-9 {
+    padding: 0 0;
+}
+
+.product-thumb .price,
+.product-thumb .weight{
 	color: #fff;
     font-size: 16px;
-    background-color: #8DC42F;
+    background-color: #e46c22;
     padding: 10px 10px;
+    text-align: center;
+}
+.product-thumb .weight {
+    background-color: #a5c546;
 }
 .product-thumb .price-new {
 	font-weight: 600;
@@ -718,30 +748,61 @@ span.contact-phones{
     overflow: hidden;
     position: relative;
 }
-.category_img img {
-    position: absolute;
-}
+
 .category_img + p{
     text-align:center;
     max-width: 110px;
+}
+.category_img:hover {
+    background-position: bottom; 
 }
 .category_img_thumb img {
     position: absolute;
     top: -112px;
     border: none;
 }
-.blocks_caption {
-    text-transform: uppercase;
-    font-size: 17px;
-    border-bottom: 2px solid rgb(221,221,221);
+
+.block_caption {
+    width: 100%;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 15px;
+    position: relative;
 }
+.block_caption > div,
+.block_caption > div h3 {
+    display: inline;
+    background-color: #f0f0f0;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+#triangle-bottomleft {
+	width: 0;
+	height: 0;
+    position: absolute;
+	border-bottom: 20px solid #f0f0f0; 
+	border-right: 30px solid transparent;
+    background-color: #fff;
+    top: 0px;
+}
+
 nav#menu.navbar {
     margin-bottom: 0px;
 }
+
+.dropdown-menu {
+    border: none;
+    padding: 0 0;
+    border-radius: 0px;
+    margin: 0 0;
+}
+
 .dropdown-menu.pull-right{
     top: 0px;
-    right: -200px;
-    min-width: 200px;
+    right: -250px;
+    min-width: 250px;
+}
+.dropdown-menu > li > a {
+    white-space: normal;
 }
 .dropdown:hover > .dropdown-menu { 
     display: block; 
@@ -751,11 +812,54 @@ nav#menu.navbar {
     background-color: #f0f0f0;
     margin: 2px 0px;
 }
-#category .nav > li > a:hover,
+#category a:hover {
+    background-color: #a5c546;
+    color: #fff;
+}
+
 #category .nav > li:hover > a ,
 #category .nav > li:hover > ul > li:hover > a{
 	background-color: #a5c546;
     color: #fff;
 }
 
+.tab-content {
+    font-size: 14px;
+}
+.some-links {
+    padding-bottom: 35px;
+    padding-top: 35px;
+    text-align: center;
+}
+
+.some-links div.semena, .some-links div.semena a,
+.some-links div.sazhancy, .some-links div.sazhancy a,
+.some-links div.ydobrenia, .some-links div.ydobrenia a{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 30px auto;
+}
+div.semena a, div.sazhancy a, div.ydobrenia a {
+    position: absolute;
+    padding-top: 195px;
+}
+.semena {
+    background-image: url("../../../../../image/catalog/knopavki/knopka_semena_grey.png");
+}
+.semena:hover {
+    background-image: url("../../../../../image/catalog/knopavki/knopka_semena_green.png");
+}
+.sazhancy {
+    background-image: url("../../../../../image/catalog/knopavki/knopka_sazhancy_grey.png");
+}
+.sazhancy:hover {
+    background-image: url("../../../../../image/catalog/knopavki/knopka_sazhancy_green.png");
+}
+.ydobrenia {
+    background-image: url("../../../../../image/catalog/knopavki/knopka_ydobrenia_grey.png");
+}
+.ydobrenia:hover {
+    background-image: url("../../../../../image/catalog/knopavki/knopka_ydobrenia_green.png");
+}
 /*55554*/

@@ -27,13 +27,13 @@
       <hr>
       <?php } ?>
       <?php if ($categories) { ?>
-      <h3><?php echo $text_refine; ?></h3>
+      
       <?php if (count($categories) <= 6) { ?>
       <div class="row">
         <div class="col-sm-3 col-md-12">
               <ul class="catimages navbar-nav">
                 <?php foreach ($categories as $category) { ?>
-                  <li><a href="<?php echo $category['href']; ?>"><div class="category_img"><img src="<?php echo $category['image']; ?>"></div><p><?php echo $category['name']; ?></p></a></li>
+                  <li><a href="<?php echo $category['href']; ?>"><div class="category_img" style="background-image: url('<?php echo $category['image']; ?>');"></div><p><?php echo $category['name']; ?></p></a></li>
                 <?php } ?>
               </ul>
         </div>
@@ -44,7 +44,7 @@
         <div class="col-sm-3 col-md-12">
           <ul class="catimages navbar-nav">
             <?php foreach ($categories as $category) { ?>
-            <li><a href="<?php echo $category['href']; ?>"><div class="category_img"><img src="<?php echo $category['image']; ?>"></div><p><?php echo $category['name']; ?></p></a></li>
+            <li><a href="<?php echo $category['href']; ?>"><div class="category_img" style="background-image: url('<?php echo $category['image']; ?>');"></div><p><?php echo $category['name']; ?></p></a></li>
             <?php } ?>
           </ul>
         </div>
@@ -123,7 +123,9 @@
                             </p>
                         </div>
                         <div class="col-lg-6">
-                            <a href="<?php echo $product['href']; ?>">Отзывы: <?php if ($product['reviews']) { echo $product['reviews'];} else { echo '0';  }?></a>
+                            <p class='weight'>
+                                <?php echo "Вес: " .round($product['weight'],2). "г"; ?>
+                            </p>
                         </div>
                     </div>
                 <?php } ?>

@@ -28,10 +28,11 @@
 <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/floramag/stylesheet/stylesheet.css" rel="stylesheet">
+
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
+<link href="catalog/view/theme/floramag/stylesheet/stylesheet.css" rel="stylesheet">
 <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
 <script src="catalog/view/javascript/flora.js" type="text/javascript"></script>
 <?php foreach ($scripts as $script) { ?>
@@ -44,7 +45,7 @@
   <div class="container">
     <div id="top-links" class="nav pull-right">
       <ul class="list-inline">
-        <li>Тут что-то будет... :)</li>
+        <li>Тут что-то будет.... :)</li>
 
       </ul>
     </div>
@@ -53,10 +54,10 @@
 <header>
   <div class="container">
     <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-xs-2">
             <a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md contact-phones"><?php echo nl2br($telephone); ?></span>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-xs-10">
             <div id="logo">
           <?php if ($logo) { ?>
           <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
@@ -65,9 +66,9 @@
           <?php } ?>
         </div>
         </div>
-      <div class="col-sm-4"><?php echo $search; ?>
+      <div class="col-sm-4 col-xs-12"><?php echo $search; ?>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 col-xs-12">
           <ul class="list-inline flora-links">
               <li><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"> <span class="hidden-xs hidden-sm hidden-md"><img src="/catalog/view/theme/floramag/image/cabinet.png"></span> </a>
                   <ul class="dropdown-menu dropdown-menu-left">
@@ -124,7 +125,7 @@
         <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
         <?php } ?>
         <?php } ?>
-        <li><a href="http://flora-mag.com/index.php?route=product/category&path=0" title="Каталог семян"><span class="hidden-xs hidden-sm hidden-md">Каталог</span></a></li>
+        <li><a href="http://flora-mag.com/index.php?route=product/category&path=61" title="Каталог семян"><span class="hidden-xs hidden-sm hidden-md">Каталог</span></a></li>
         <li><a href="http://flora-mag.com/index.php?route=information/information&information_id=4" title="Каталог семян"><span class="hidden-xs hidden-sm hidden-md">О компании</span></a></li>
         <li><a href="http://flora-mag.com/index.php?route=product/special" title="Акции магазина семян"><span class="hidden-xs hidden-sm hidden-md">Акции</span></a></li>
         <li><a href="http://flora-mag.com/index.php?route=information/information&information_id=7" title="Новинки магазина семян"><span class="hidden-xs hidden-sm hidden-md">Новинки</span></a></li>
